@@ -1,0 +1,94 @@
+<html>
+<!-- Frontend page code for M&P Tetris by Jack Gordley -->
+
+<head>
+    <title>
+        M&P Tetris
+    </title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Home screen for game room creation and joining logic -->
+    <div id="homeScreen">
+        <div id="header">
+            <h1>M&P Tetris</h1>
+        </div>
+        <div class="container">
+            <div class="row justify-content-around" id="mainblock">
+                <div id="leftDiv" class="col-md-5">
+                    <button id="createRoomButton" type="button" class="btn btn-success">Create Room</button>
+                </div>
+                <div id="rightDiv" class="col-md-5">
+                    <input type="text" class="form-control" id="roomText" placeholder="Room code">
+                    <br>
+                    <button id="joinRoomButton" type="button" class="btn btn-success">Join Room</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Waiting screen for player who created the room and is waiting -->
+    <div id="waitingScreen">
+        <div id="header">
+            <h1>M&P Tetris</h1>
+        </div>
+        <div id="roomCode" class="container">
+            <h4 id="roomCodeText">
+                Room Code: error
+            </h4>
+        </div>
+    </div>
+
+    <!-- Game screen for actual gameplay and display of both players -->
+    <div id="gameScreen" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="leftgrid">
+                    <canvas id="mainGame" class="gameCourt"></canvas>
+                    <div class="stats">
+                        <div>
+                            <h1>YOU</h1>
+                            <p>Score: <span id="dScore">0</span></p>
+                            <p>Lines: <span id="dLines">0</span></p>
+                            <p>Speed: <span id="dSpeed">1</span></p>
+                            <canvas id="next" class="next"></canvas>
+                        </div>
+                        <button class="btn btn-success">Attack</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="rightgrid">
+                    <div id="rightStats" class="stats">
+                        <div>
+                            <h1>OPP</h1>
+                            <p>Score: <span id="oScore">0</span></p>
+                            <p>Lines: <span id="oLines">0</span></p>
+                            <p>Speed: <span id="oSpeed">1</span></p>
+                            <canvas id="nextPiece"></canvas>
+                        </div>
+                    </div>
+                    <canvas id="opponentGame" class="gameCourt"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"
+        integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI"
+        crossorigin="anonymous"></script>
+    <script src="scripts/Board.js"></script>
+    <script src="scripts/Piece.js"></script>
+    <script src="scripts/index.js"></script>
+
+</body>
+
+</html>

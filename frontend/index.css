@@ -1,0 +1,79 @@
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    margin: auto;
+}
+
+#homeScreen {
+    visibility: visible;
+}
+
+#waitingScreen {
+    visibility: hidden;
+}
+
+#gameScreen {
+    visibility: hidden;
+}
+
+#roomCode {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+    width: 100%;
+    margin: 25px;
+    margin-bottom: 50px;
+}
+
+#mainblock {
+    text-align: center;
+}
+
+#roomText {
+    width: 80%; 
+    margin: auto;
+}
+
+#leftDiv {
+    padding: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#rightDiv {
+    padding: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#gameScreen {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.leftgrid {
+    display: grid;
+    grid-template-columns: 320px 200px;
+}
+
+.rightgrid {
+    display: grid;
+    grid-template-columns: 200px 320px;
+}
+
+#rightStats {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gameCourt {
+    border: solid 2px;
+}
