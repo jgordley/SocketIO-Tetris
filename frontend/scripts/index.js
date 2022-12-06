@@ -1,7 +1,7 @@
 // Client code for M&P Tetris Frontend
 // Jack Gordley
 // Initialize socket.io app
-const socket = io('http://127.0.0.1:3000');
+const socket = io('https://whispering-cliffs-66614.herokuapp.com/');
 
 // Getting webpage elements
 const homeScreen = document.getElementById('homeScreen');

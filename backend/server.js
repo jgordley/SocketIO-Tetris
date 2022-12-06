@@ -69,4 +69,4 @@ io.on('connection', (socket) => {
     })
 });
 
-io.listen(port);
+io.listen(process.env.PORT || port);
